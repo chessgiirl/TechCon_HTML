@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - TechCon 2024</title>
+  <meta charset="utf-8">
+  <title>Contact Us - TechCon 2024</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f7f9fe;color:#222}
+    header{background:#0b5bd7;color:#fff;padding:18px}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:8px 0 0}
+    main{max-width:980px;margin:20px auto;background:#fff;padding:20px;border-radius:6px}
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:16px;align-items:start}
+    .contact-list p{margin:8px 0}
+    iframe{width:100%;border:0;height:240px;border-radius:6px}
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:8px;border-radius:4px;border:1px solid #dbe8ff}
+    button{background:#0b5bd7;color:#fff;border:none;padding:10px;border-radius:4px}
+    footer{background:#eef3ff;padding:12px;text-align:center}
+    @media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <header>
     <h1>Contact Us</h1>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="schedule.html">Schedule</a> |
-      <a href="register.html">Register</a> |
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Get in Touch</h2>
-    <p>Email: info@techcon2024.com</p>
-    <p>Phone: +1 (555) 123-4567</p>
+    <h2>Get in touch</h2>
+    <div class="contact-grid">
+      <div class="contact-list">
+        <p><strong>Email:</strong> <a href="mailto:email@example.com">email@example.com</a></p>
+        <p><strong>Social:</strong>
+          <a href="https://twitter.com/techcon" target="_blank" rel="noopener">Twitter</a> |
+          <a href="https://www.linkedin.com/company/techcon" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
 
-    <h2>Contact Form</h2>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
+        <h3>Location</h3>
+        <p>Addis Ababa Convention Center<br>Address line, City, Country</p>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
+        <h3>Contact form</h3>
+        <form action="#" method="post" aria-label="Contact form">
+          <label for="cname">Name</label>
+          <input id="cname" name="name" type="text" required>
+          <label for="cemail">Email</label>
+          <input id="cemail" name="email" type="email" required>
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea><br><br>
-
-      <button type="submit">Send</button>
-    </form>
+      <div class="map">
+        <!-- simple Google Maps embed via query (responsive) -->
+        <iframe src="https://www.google.com/maps?q=Addis+Ababa+Convention+Center&output=embed" title="Conference location map" loading="lazy"></iframe>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2024 TechCon. All rights reserved.</p>
-  </footer>
+  <footer>&copy; 2024 TechCon • Made by Chessgiirl - <a href="https://github.com/chessgiirl" target="_blank" rel="noopener">here</a></footer>
 </body>
 </html>

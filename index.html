@@ -2,34 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TechCon 2024</title>
+  <title>TechCon 2024 | Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    /* Inline style for index.html */
+    :root{--brand:#0b5bd7;--dark:#063a7a;--muted:#666}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#222;line-height:1.5;background:#f4f6fb}
+    header{background:var(--dark);color:#fff;padding:18px}
+    header h1{margin:0;font-size:1.4rem}
+    nav ul{list-style:none;margin:8px 0 0;padding:0;display:flex;gap:12px}
+    nav a{color:#fff;text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    main{max-width:980px;margin:22px auto;background:#fff;padding:22px;border-radius:6px;box-shadow:0 2px 8px rgba(10,20,40,.06)}
+    .intro{display:grid;gap:12px}
+    .cta{margin-top:8px}
+    footer{background:#e9eefb;color:#333;padding:12px;text-align:center;font-size:.9rem}
+    .video-wrap{margin-top:10px}
+    .video-desc{font-size:.9rem;color:var(--muted)}
+  </style>
 </head>
 <body>
   <header>
     <h1>TechCon 2024</h1>
     <nav>
-      <a href="about.html">About</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="register.html">Register</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>TechCon 2024 brings together innovators from around the globe for an unforgettable tech experience.</p>
-      <video controls>
-        <source src="cute1.mp4" type="video/mp4">
-        <track kind="captions" src="captions.vtt" srclang="en" label="English captions" default>
-        Sorry, your browser doesn’t support embedded video.
-      </video>
+    <section class="intro" aria-labelledby="welcome">
+      <h2 id="welcome">Welcome to TechCon 2024</h2>
+      <p>Join industry leaders, innovators, and enthusiasts for a three-day conference showcasing the latest in cloud, AI, developer tools, and open-source. Sessions, workshops, and panels to spark ideas and collaborations.</p>
+
+      <div class="video-wrap" aria-labelledby="promo">
+        <h3 id="promo">Conference Promo</h3>
+        <video controls width="720" aria-describedby="promo-desc">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p id="promo-desc" class="video-desc">Short promotional video about TechCon 2024 summarizing keynote topics and hands-on workshops.</p>
+      </div>
+
+      <div class="cta">
+        <p><strong>Dates:</strong> November 12–14, 2024 · <strong>Location:</strong> Addis Ababa Convention Center</p>
+        <p><a href="register.html">Register now</a> to secure your spot — early bird pricing available.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 TechCon 2024 – All rights reserved.</p>
+    &copy; 2024 TechCon • Made by Chessgiirl - <a href="https://github.com/chessgiirl" target="_blank" rel="noopener">here</a>
   </footer>
 </body>
 </html>
