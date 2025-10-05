@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Contact Us</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="contact-info">
+        <h2 id="contact-info">Contact Information</h2>
+        <p>
+          General enquiries: <a href="mailto:email@example.com">email@example.com</a>
+        </p>
+
+        <p>Follow TechCon on social media:</p>
+        <ul>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+
+        <h3>Location</h3>
+        <!-- Responsive iframe wrapper for Google Maps -->
+        <div style="max-width:100%;height:0;padding-bottom:56.25%;position:relative;">
+          <iframe
+            src="https://www.google.com/maps?q=Addis%20Ababa%20Ethiopia&output=embed"
+            style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Conference location map"></iframe>
+        </div>
+
+        <h3>Send us a message</h3>
+        <form action="#" method="post">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="contact-name" required />
+
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="contact-email" required />
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>copyright © TechCon 2024 — 2025. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
